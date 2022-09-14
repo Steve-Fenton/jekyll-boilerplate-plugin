@@ -11,6 +11,10 @@ module Jekyll
     def t(section, item)
       site = @context.registers[:site]
 
+      if site.data['language'] == nil
+        Jekyll.logger.warn 'Liquid Language:', 'No _data/language file found. ' + site.data;
+      end
+
       if @@lang == nil
         # Access this fewer times by keeping it as a module variable
         @@lang = Jekyll.configuration({})['language']

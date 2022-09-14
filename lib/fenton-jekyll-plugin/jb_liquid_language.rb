@@ -12,7 +12,8 @@ module Jekyll
       site = @context.registers[:site]
 
       if site.data['language'] == nil
-        Jekyll.logger.warn 'Liquid Language:', 'No _data/language file found. ' + site.data;
+        Jekyll.logger.warn 'Liquid Language:', 'No _data/language file found. ' + 
+          site.data.keys.join(', ')
       end
 
       if @@lang == nil

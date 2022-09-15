@@ -11,7 +11,7 @@ module Jekyll
     end
 
     def isnil_or_empty(val, default)
-      if val == nil || val.strip == ''
+      if val == nil || val.blank
         return default
       else
         return val

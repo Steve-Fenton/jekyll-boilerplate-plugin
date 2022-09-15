@@ -4,9 +4,9 @@ module Jekyll
   module IfNIl
     def isnil(val, default)
       if val == nil
-        puts default
+        return default
       else
-        puts val
+        return val
       end
     end
 

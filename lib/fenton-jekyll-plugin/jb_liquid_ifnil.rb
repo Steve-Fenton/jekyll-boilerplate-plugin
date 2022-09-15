@@ -3,19 +3,19 @@ require 'liquid'
 module Jekyll
   module IfNIl
     def isnil(val, default)
+      if [true, false].include? val
+        return val
+      end
+        
       if val == nil
         return default
-      else
-        return val
       end
-    end
-
-    def isnil_or_empty(val, default)
-      if val == nil || val.blank
+    
+      if val.is_a? String and val.strip == ''
         return default
-      else
-        return val
       end
+    
+      return val
     end
   end
 end

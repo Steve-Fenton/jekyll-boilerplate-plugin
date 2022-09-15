@@ -1,7 +1,7 @@
 require 'liquid'
 
 module Jekyll
-  module IfNIl
+  module IsNIl
     def isnil(val, default)
       if [true, false].include? val
         return val

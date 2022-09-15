@@ -20,4 +20,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_filter(Jekyll::IfNIl)
+Liquid::Template.register_filter(Jekyll::IsNIl)

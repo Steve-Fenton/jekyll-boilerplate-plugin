@@ -10,6 +10,13 @@ module Jekyll
       end
     end
 
+    def isnil_or_empty(val, default)
+      if val == nil || val.strip == ''
+        return default
+      else
+        return val
+      end
+    end
   end
 end
 
